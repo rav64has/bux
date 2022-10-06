@@ -5,6 +5,7 @@
     method="post"
     enctype="multipart/form-data"
   >
+  <h2>Регистрация</h2>
   <div class="group">
     <label>ФИО</label>
     <input

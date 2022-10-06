@@ -20,6 +20,7 @@ const routes = [
     name: 'contacts',
     component: () => import('../views/ContactsVue.vue')
   },
+ 
   {
     path: '/login',
     name: 'login',
@@ -31,6 +32,16 @@ const routes = [
     component: () => import('../views/RegVue.vue')
   },
   {
+    path: '/news',
+    name: 'news',
+    component: () => import('../views/NewsVue.vue')
+  },
+  {
+    path: '/news/:id',
+    name: 'detail',
+    component: () => import('../views/Detail.vue') 
+  },
+  {
     path: '/add',
     name: 'add',
     component: () => import('../views/AddVue.vue')
@@ -39,6 +50,26 @@ const routes = [
     path: '/edit/:id',
     name: 'edit',
     component: () => import('../views/EditVue.vue')
+  },
+  {
+    path: '/profil',
+    name: 'profil',
+    component: () => import('../views/ProfilVue.vue')
+  },
+  {
+    path: '/avatar',
+    name: 'avatar',
+    component: () => import('../views/AvatarVue.vue')
+  },
+  {
+    path: '/image',
+    name: 'image',
+    component: () => import('../views/ImageVue.vue')
+  },
+  {
+    path: '/admin',
+    name: 'admin',
+    component: () => import('../views/AdminVue.vue')
   }
 ]
 

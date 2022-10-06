@@ -23,6 +23,7 @@
     <td>{{data.name}}</td>
     <td>{{data.summ}}</td>
     <td>{{data.amout}}</td>
+     <!-- <td><router-link :to="'/delete/'+data.id">delete</router-link></td> -->
     <td><button type="submit" @click="uchetDelete(data.id)">delete</button></td>
     <td><router-link :to="'/edit/'+data.id">edit</router-link></td>
     </tr>
@@ -58,14 +59,13 @@ export default {
         alert("Xato ?");
           }
     },
-    uchetDelete(id){
+    async uchetDelete(id){
        try {
-         axios.delete("http://buxgalter/api/uchet/${id}")
-          .then((response)=>{
-            this.uchet=response.data
-            console.log(this.uchet)
-             alert("Маълумотлар ўчирилди!")
-            this.$router.push({path:"/about"})
+           await axios.delete("http://buxgalter/api/uchetDelete/"+id)
+           .then((response) => {
+            console.log(response.data);
+            alert("Маълумотлар ўчирилди!");
+            this.$router.push({path:"/"})
         
         });
       } 

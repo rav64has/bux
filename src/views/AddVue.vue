@@ -42,6 +42,7 @@ export default {
             console.log(response.data)
          
         alert("Маълумотлар кўшилди")
+        this.$router.push({path:"/about"})
         });
       } catch (error) {
 

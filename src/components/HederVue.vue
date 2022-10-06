@@ -24,6 +24,12 @@
         <li class="nav-item">
           <router-link class="nav-link" to="/contacts">Контакты</router-link>
         </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/avatar">Avatar</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/image">Изображение</router-link>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Вход
@@ -44,13 +50,21 @@
           </li>
       </ul>  
     </div>
-    <button class="lang-btn">
+    <select>
+	<option>Choose language</option>
+	<option value="/en/">English</option>
+  	<option value="/ru/">Русский</option>
+	<option value="/uz/">Uzbek</option>
+	<option value="/ўз/">Ўзбекча</option>
+  	
+</select>
+    <!-- <button class="lang-btn">
       <!-- <select v-model="$i18n.lang">  -->
-        <option v-for="(lang, i) in langs" :key="`lang${i}`" :value="lang">
+        <!-- <option v-for="(lang, i) in langs" :key="`lang${i}`" :value="lang">
            {{ lang }}
-        </option>
+        </option> -->
       <!-- </select>  -->
-    </button> 
+    <!-- </button>  --> 
   </div>
 </nav>
  </div>
