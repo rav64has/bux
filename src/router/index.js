@@ -34,12 +34,12 @@ const routes = [
   {
     path: '/news',
     name: 'news',
-    component: () => import('../views/NewsVue.vue')
+    component: () => import('../views/NewsBVue.vue')
   },
   {
     path: '/news/:id',
     name: 'detail',
-    component: () => import('../views/Detail.vue') 
+    component: () => import('../views/DetailVue.vue') 
   },
   {
     path: '/add',

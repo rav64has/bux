@@ -30,46 +30,45 @@
         <li class="nav-item">
           <router-link class="nav-link" to="/image">Изображение</router-link>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Вход
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <router-link to="/login">Войти</router-link>|
-            <router-link to="/reg">Регистрация</router-link>|
-            <router-link to="/">Выход</router-link>|
-          </ul>
-        </li>
-      </ul>
+        </ul>
                                 
     </div>
     <div class="collapse navbar-collapse">
        <ul class="navbar-nav" v-if="login">
-          <li class="nav-item" style="color: white">
-              {{ this.login }}
+          <li class="nav-item" >
+             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{ this.login }}
+          </a> 
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><router-link to="/profil">Пофиль</router-link>|</li>
+            <li><button type="sambit" @click="logout">Выход</button></li>
+           </ul>
           </li>
       </ul>  
     </div>
+    <div class="collapse navbar-collapse" v-if="!login" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <router-link class="nav-link"  to="/login">Войти</router-link> 
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/reg">Регистрация</router-link>
+        </li>
+      </ul>
+    </div>
     <select>
-	<option>Choose language</option>
+	<option>Uzbek</option>
 	<option value="/en/">English</option>
   	<option value="/ru/">Русский</option>
-	<option value="/uz/">Uzbek</option>
-	<option value="/ўз/">Ўзбекча</option>
+		<option value="/ўз/">Ўзбекча</option>
   	
 </select>
-    <!-- <button class="lang-btn">
-      <!-- <select v-model="$i18n.lang">  -->
-        <!-- <option v-for="(lang, i) in langs" :key="`lang${i}`" :value="lang">
-           {{ lang }}
-        </option> -->
-      <!-- </select>  -->
-    <!-- </button>  --> 
-  </div>
+ </div>
 </nav>
  </div>
 </template>
 <script>
+import axios from "axios"
 export default {
   name: 'HederVue',
   data(){
@@ -78,6 +77,19 @@ export default {
       langs: ['uz', 'ru', 'en']
     }
   },
+  methods: {
+            logout() {
+                axios.get("http://buxgalter/api/logout").then(response => {
+                    localStorage.removeItem('user')
+                    this.login=''
+                    this.$router.push("/")
+
+                }).catch(error => {
+                    location.reload();
+                    console.log(error)
+                });
+            }
+ },
    mounted(){
     if(localStorage.user){
      

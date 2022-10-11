@@ -27,11 +27,16 @@ export default {
       try {
         const response =  await axios.post("http://buxgalter/api/login", this.login)
           .then((response)=>{
-            console.log(response.data)
+            
+            localStorage.setItem('user', response.data.login)
+            console.log(localStorage.user)
+           
           if(response.data.is_admin == 1){
             this.$router.push({path:"/admin"})
+            //  location.reload();
           }else{
             this.$router.push({path:"/"})
+            location.reload();
           }
           alert("Calom " + this.login.login + " !")
         });
