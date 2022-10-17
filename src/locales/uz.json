@@ -1,0 +1,66 @@
+{
+"message": "salom i18n !!",
+"nav": {
+  "home": "Asosiy",
+  "about": "Biz xakmida",
+  "news": "Yangiliklar",
+  "contacts": "Boglanish",
+  "avatar": "Abatar",
+  "image": "Rasmlar"
+},
+"home":{
+  "title_1": "Xush kelibsiz!",
+  "title_2": "Oila byudjetini rejalashtirish uchun uy hisobi",
+  "text_2": "Shaxsiy va barcha oila a'zolaringizning moliyaviy ahvolini yozib oling. Maxfiylikni ta'minlash uchun har bir foydalanuvchining yozuvlari parol bilan himoyalangan bo'lishi mumkin",
+  "title_3": "Shaxsiy mablag'lar, xarajatlar va daromadlarni kuzatib borish",
+  "text_3": "Moliyangizni to'liq nazorat ostida ushlab turish uchun barcha xarajatlaringiz va daromadlaringizni \"Uy buxgalteriyasi\" ga kiriting. Moliyaviy rejalaringizni va byudjetingizni tuzing, daromad va xarajatlarni kuzatib boring.",
+  "title_4": "Kreditlaringiz va olingan pullaringizni \"Uy buxgalteriyasi\" ga kiriting.",
+  "text_4":"Kreditlar va qarzlarni to'liq nazorat qilish, shu jumladan to'lov jadvalini va eslatmalarni hisoblash funktsiyalari bilan ularning qaytarilishini nazorat qilish.",
+  "title_5": "Uy byudjetingizni dunyoning istalgan valyutasida boshqaring",
+  "text_5":"Home Bookkeeping-dagi valyutalar ro'yxati dunyoning barcha valyutalarini o'z ichiga oladi. Shaxsiy mablag'larni hisobga olish uchun foydalanadigan valyutalarni tanlang.",
+  "title_6": "Turli qurilmalarda uy buxgalteriyasidan foydalaning",
+  "text_6":"Sinxronizatsiya funksiyasi boshqa kompyuterda yoki Android, iPhone, iPad mobil qurilmasida o'rnatilgan Home Accounting bilan ma'lumotlarni almashish imkonini beradi.",
+  "title_7": "Vizual hisobotlar va diagrammalar - tahlil qilish uchun oddiy va qulay vosita",
+  "text_7":"Uyda buxgalteriya hisobi sizning moliyaviy ahvolingizni turli xil hisobotlar va vizual jadvallar yordamida tahlil qilishga yordam beradi.",
+  "title_8": "Ma'lumotlarni import va eksport qilish",
+  "text_8":"Bank hisob-kitoblarini Home Bookkeeping-ga import qiling. Agar siz uy buxgalteriyasidan ma'lumotlarni biron joyga o'tkazishingiz kerak bo'lsa, eksport funktsiyasi bunga yordam beradi.",
+  "title_9": "Sizning ma'lumotlaringiz ishonchli himoya ostida",
+  "text_9":"Ishonchli zaxira tizimi bilan ma'lumotlaringiz har doim butunlay xavfsiz ekanligiga ishonch hosil qiling va siz ularni hech qachon yo'qotmaysiz."
+},
+"contact":{
+  "title":"Bu kontaktlar sahifasi"
+},
+"register":{
+  "title":"Roʻyxatdan oʻtish",
+  "name":"Familiyasi ismi otasini ismi",
+  "Name":"Toʻliq ismingizni kiriting",
+  "login":"LOGIN",
+  "login_1":"Loginingizni kiriting",
+  "email":"Pochta",
+  "email_1":"E-mail manzilingizni kiriting",
+  "avtar":"Profil rasmi",
+  "password":"Parol",
+  "password_1":"parolni kiriting",
+  "password_2":"Parolni tasdiqlash",
+  "password_3":"Parolni tasdiqlang",
+  "account":"Sizda account bormi?",
+  "noaccount":"Accountgiz yo'qmi?",
+  "register_1":"ro'yxatdan o'tish",
+  "log":"Kirish",
+  "Input":"Kirish",
+  "exit":"Chiqish",
+  "profile":"Profil"
+},
+"about":{
+  "type":"Turi",
+  "date":"Sana",
+  "name":"Nomi",
+  "summ":"Narxi",
+  "amout":"Miqdorlar",
+  "delete":"Oʻchirish",
+  "edit":"Tahrirlash"
+},
+"news":{
+  "title":"Hamma yangilik"
+} 
+}

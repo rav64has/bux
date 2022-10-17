@@ -9,9 +9,9 @@
           <div class="row">
             <div class="col-md-9">
               <div class="main-heading">
-                <h1>{{news.title}}</h1>
+                <h1>{{news.title[`${$i18n.locale}`]}}</h1>
                 <div class="desc" >
-                  <p>{{news.artical}}</p>
+                  <p>{{news.artical[`${$i18n.locale}`]}}</p>
                 </div>
               </div>
             </div>

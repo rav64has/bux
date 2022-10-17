@@ -5,62 +5,68 @@
     method="post"
     enctype="multipart/form-data"
   >
-  <h2>Регистрация</h2>
+  <h2>{{$t("register.title")}}</h2>
   <div class="group">
-    <label>ФИО</label>
+    <label>{{$t("register.name")}}</label>
     <input
       type="text"
       name="full_name"
       v-model="register.full_name"
-      placeholder="Введите свое полное имя"
+      :placeholder="$t('register.Name')"
     />
   </div>
   <div class="group">
-    <label>Логин</label>
+    <label>{{$t("register.login")}}</label>
     <input
       type="text"
       name="login"
       v-model="register.login"
-      placeholder="Введите свой логин"
+      :placeholder="$t('register.login')"
     />
   </div>
   <div class="group">
-    <label>Почта</label>
+    <label>{{$t("register.email")}}</label>
     <input
       type="email"
       name="email"
       v-model="register.email"
-      placeholder="Введите адрес своей почты"
+      :placeholder="$t('register.email')"
     />
   </div>
   <div class="group">
-    <label>Изображение профиля</label>
-    <input type="text" name="avatar" v-model="register.avatar"/>
+    <label>{{$t("register.avatar")}}</label>
+    <input 
+      type="file"
+      id="file"
+      ref="fileInput"
+      accept="image/*,.png,.gif,.web,.jpg"
+      v-on:change="onfileSelected"
+      name="avatar" />
   </div>
   <div class="group">
-    <label>Пароль</label>
+    <label>{{$t("register.password")}}</label>
     <input
       type="password"
       name="password"
       v-model="register.password"
-      placeholder="Введите пароль"
+      :placeholder="$t('register.password_1')"
     />
   </div>
   <div class="group">
-    <label>Подтверждение пароля</label>
+    <label>{{$t("register.password_2")}}</label>
     <input
       type="password"
       name="password_confirm"
       v-model="register.password_confirm"
-      placeholder="Подтвердите пароль"
+      :placeholder="$t('register.password_3')"
     />
   </div>
   <div class="group"
     <button type="submit"  @click="Register">
-      Регистрация
+      {{$t("register.title")}}
     </button>
   </div>
-    <p>У вас уже есть аккаунт? - <a href="/login">авторизируйтесь</a>!</p>
+    <p>{{$t("register.account")}} - <a href="/login">{{$t("register.log")}}</a>!</p>
   
   </form>
 </template>
@@ -76,16 +82,27 @@ export default {
         email: "",
         avatar: "",
         password: "",
-        password_confirm: ""
+        password_confirm: "",
+        selectedFile: null
       },
+      
     };
   },
   methods: {
     async Register(){
       try {
-        const response =  await axios.post("http://buxgalter/api/register", this.register)
-          .then((response)=>{
-            console.log(response.data)
+          const fd = new FormData();
+          fd.append('full_name', this.register.full_name);
+          fd.append('login', this.register.login);
+          fd.append('email', this.register.email);
+          fd.append('password', this.register.password);
+           fd.append('password_confirm', this.register.password_confirm);
+          fd.append('avatar', this.selectedFile, this.selectedFile.name);
+          // console.log(fd)
+          await axios.post("http://buxgalter/api/register",fd)
+         
+          .then((fd)=>{
+            console.log(fd)
         alert("Ro'yhatdan o'tdingiz !")
         });
       } catch (error) {
@@ -94,6 +111,10 @@ export default {
         alert("Xato, Ro'yhatdan o'tmadiz.");
       }
     },
+     onfileSelected(event) {
+      this.selectedFile = event.target.files[0]
+    },
+
   },
 };
 </script>

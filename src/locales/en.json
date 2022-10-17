@@ -1,0 +1,67 @@
+{
+  "message": "salom i18n !!",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "news": "News",
+    "contacts": "Contacts",
+    "avatar": "Avatar",
+    "image": "Image"
+    },
+  "home":{
+    "title_1": "Welcome!",
+    "title_2": "Home bookkeeping for family budget planning",
+    "text_2": "Keep a record of personal finances and the finances of all your family members. To ensure privacy, each user's records can be password protected",
+    "title_3": "To keep track of personal finances, expenses and income",
+    "text_3": "Enter all your expenses and income into Home Bookkeeping to keep your finances under complete control. Build your financial plans and budget, keep track of income and expenses.",
+    "title_4": "Enter your loans and borrowed money into Home Bookkeeping.",
+    "text_4":"Full control of loans and money lent, including control of their return with the functions of calculating the payment schedule and reminders.",
+    "title_5": "Manage your home budget in any currency in the world",
+    "text-5":"The list of currencies in Home Bookkeeping contains all the currencies of the world. Select the currencies that you use to account for personal finances.",
+    "title_6": "Use Home Bookkeeping on different devices",
+    "text_6":"The synchronization function allows you to exchange data with Home Accounting installed on another computer or on an Android, iPhone, iPad mobile device.",
+    "title_7": "Visual reports and charts - a simple and convenient tool for analysis",
+    "text_7":"Home bookkeeping will help you analyze your finances with a variety of reports and visual charts.",
+    "title_8": "Data import and export",
+    "text_8":"Import your bank statements into Home Bookkeeping. If you need to transfer data from Home Bookkeeping somewhere, then the export function will help with this.",
+    "title_9": "Your data is under reliable protection",
+    "text-9":"With a reliable backup system, be sure that your data is always completely safe and you will never lose it."
+  },
+  "contact":{
+      "title":"This is an contacts page"
+  },
+  "register":{
+    "title":"Registration",
+    "name":"Full Name",
+    "Name":"Enter your full name",
+    "login":"Login",
+    "login_1":"Enter your login",
+    "email":"Email",
+    "email_1":"Enter your email",
+    "avtar":"Profile picture",
+    "password":"Password",
+    "password_1":"Enter your password",
+    "password_2":"Password confirmation",
+    "password_3":"Confirm the password",
+    "account":"Do you already have an account?",
+    "noaccount":"Don't have an account?",
+    "register_1":"register",
+    "log":"log in",
+   "Input":"Sign In",
+   "exit":"Logout",
+   "profile":"Profile"
+  },
+
+"about":{
+  "type":"Type of",
+  "date":"The date",
+  "name":"Name",
+  "summ":"Price",
+  "amout":"Quantities",
+  "delete":"Delete",
+  "edit":"Edit"
+},
+"news":{
+  "title":"A news all"
+} 
+}

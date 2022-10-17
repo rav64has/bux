@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="heading-sec">
-          <h1>A news all </h1>
+          <h1>{{$t("news.title")}} </h1>
         </div>
       </div>
       <div
@@ -19,8 +19,8 @@
             />
           </div>
           <div class="text-sec">
-            <h5 class="news-title" >{{news.title}}</h5>
-            <p>{{news.artical.slice(0,126)}}...</p>
+            <h5 class="news-title" >{{news.title[`${$i18n.locale}`]}}</h5>
+            <p>{{news.artical[`${$i18n.locale}`].slice(0,126)}}...</p>
             <div class="publisher-info d-flex align-item-center">
               <div class="info">
                 <span class="publisher-date">{{ news.created_at }}</span>

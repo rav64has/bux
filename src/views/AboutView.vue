@@ -4,13 +4,13 @@
     <thead>
         <tr>
             <th> №  </th>
-            <th>Тип</th>
-            <th>Дата</th>
-            <th>Наименование </th>
-            <th>Стоимость, сум.</th>
-            <th>Количеств</th>
-            <th>Удалить</th>
-            <th>Редактировать</th>
+            <th>{{$t("about.type")}}</th>
+            <th>{{$t("about.date")}}</th>
+            <th>{{$t("about.name")}}</th>
+            <th>{{$t("about.summ")}}</th>
+            <th>{{$t("about.amout")}}</th>
+            <th>{{$t("about.delete")}}</th>
+            <th>{{$t("about.edit")}}</th>
         </tr>
     </thead>
     <tbody>

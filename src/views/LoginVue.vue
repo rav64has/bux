@@ -1,12 +1,12 @@
 <template>
   <form class = ""  @submit.prevent method="post" >
-        <label>Логин</label>
-        <input type="text" name="login" v-model="login.login" placeholder="Введите свой логин">
-        <label>Пароль</label>
-        <input type="password" name="password" v-model="login.password" placeholder="Введите пароль">
-        <button type="submit" @click="Login" class="btn btn-primary btn-block" >Войти</button>
+        <label>{{$t("register.login")}}</label>
+        <input type="text" name="login" v-model="login.login" :placeholder="$t('register.login_1')">
+        <label>{{$t("register.password")}}</label>
+        <input type="password" name="password" v-model="login.password" :placeholder="$t('register.password_1')">
+        <button type="submit" @click="Login" class="btn btn-primary btn-block" >{{$t("register.log")}}</button>
         <p>
-            У вас нет аккаунта? - <a href="/reg">зарегистрируйтесь</a>!
+            {{$t("register.noaccount")}} - <a href="/reg">{{$t("register.register_1")}}</a>!
         </p>
   </form>
 </template>
@@ -29,7 +29,8 @@ export default {
           .then((response)=>{
             
             localStorage.setItem('user', response.data.login)
-            console.log(localStorage.user)
+            localStorage.setItem('email', response.data.email)
+            console.log({'user':localStorage.user, 'email':localStorage.email})
            
           if(response.data.is_admin == 1){
             this.$router.push({path:"/admin"})
@@ -51,7 +52,7 @@ export default {
 </script>
 <style scoped>
 form {
-   margin: 0 auto;
+  margin: 0 auto;
   background: rgba(33, 225, 65, 0.77);
   width: 450px;
   height: 400px;
@@ -64,6 +65,8 @@ form {
 label {
   padding-left: 10px;
   text-transform: uppercase;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 input {
   margin-top: 10px;
@@ -91,8 +94,8 @@ p {
     margin: 10px 0;
 }
 button {
-  margin: 50px;
-
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 
